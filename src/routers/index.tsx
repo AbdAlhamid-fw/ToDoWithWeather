@@ -1,5 +1,6 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Initial } from '../pages/initial';
 import { Login } from '../pages/authentication/log-in';
 interface Props {
     
@@ -19,8 +20,11 @@ export const Routers = (props: Props) => {
               <Route path="/Login">
                 <Login />
               </Route>
+              <Route path="/Initial">
+                <Initial />
+              </Route>
               <Route path="/NotFound">
-               <h1>404</h1>
+                <h1>404</h1>
               </Route>
             </Switch>
           </div>
