@@ -1,4 +1,5 @@
 import React from "react";
+import FormA from "../../../components/form";
 import SelectA from "../../../components/select";
 import Todo from "../../../components/todo";
 
@@ -10,6 +11,7 @@ const Setting: React.FC<Props> = (props: Props) => {
     <div>
       <SelectA options={options} />
       <Todo />
+      <FormA/>
     </div>
   );
 };

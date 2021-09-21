@@ -1,12 +1,11 @@
-import { ColumnsType } from 'antd/lib/table';
-import React from 'react'
-import { TableA } from '../../components/table'
+import { ColumnsType } from "antd/lib/table";
+import { TableA } from "../../components/table";
+import LocaleForm from "./form";
+
 
 interface Props {}
 
-
-
-const columns: ColumnsType<any> = [
+const columns: ColumnsType<any> | any = [
   {
     key: "id",
     title: "Id",
@@ -16,6 +15,11 @@ const columns: ColumnsType<any> = [
     key: "key",
     title: "Key",
     dataIndex: "key",
+    editable: true,
+    onCell: (record: any) => ({
+      record,
+      editable: true,
+    }),
   },
   {
     key: "firstLanguage",
@@ -71,9 +75,10 @@ const data: any[] = [
 ];
 
 export const Locale = (props: Props) => {
-    return (
-        <div>
-            <TableA  dataSource={data} columns={columns}/> 
-        </div>
-    )
-}
+  return (
+    <div>
+      <LocaleForm />
+      <TableA dataSource={data} columns={columns} />
+    </div>  
+  );
+};
