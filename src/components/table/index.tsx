@@ -15,7 +15,11 @@ export const TableA: React.FC<TableProps> = ({
 }) => {
   return (
     <div className={style}>
-      <Table<any> dataSource={dataSource} columns={columns} />
+      <Table<any>
+        dataSource={dataSource}
+        columns={columns}
+        rowClassName={() => "editable-row"}
+      />
     </div>
   );
 };
