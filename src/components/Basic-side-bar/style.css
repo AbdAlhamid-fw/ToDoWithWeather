@@ -1,0 +1,40 @@
+.trigger {
+  padding: 0 50px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #a3bfd8e5;
+}
+
+.site-layout .site-layout-background {
+  background: #1a1d46a2;
+  padding: 1rem;
+  z-index: 1;
+  position: absolute;
+}
+/* form */
+/* header */
+.form-header {
+  top: 0px;
+  height: 3.5rem;
+  width: 100%;
+  position: absolute;
+  background: rgb(0 0 0);
+  text-align: left;
+}
+.form {
+  background: rgb(255 255 255 / 94%);;
+  padding: 2rem;
+  margin-top: 3.5rem;
+
+}
+.layout {
+  z-index: 1;
+}
+.form-footer{
+  background-color: whitesmoke;
+}
