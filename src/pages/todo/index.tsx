@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Edit, Plus } from "react-feather";
-import List from "../List";
+import List from "../../components/List";
 import "./index.css";
 
 interface props {

@@ -1,6 +1,6 @@
 import React from "react";
-//import { FaEdit, FaTrash } from "react-icons/fa";
-import { Edit, Delete } from "react-feather";
+import IToDoItemType from "../../interfaces/to-do-item";
+import ToDoItem from "../to-do-item";
 interface Props {
   items: any;
   removeItem: any;
@@ -10,28 +10,11 @@ interface Props {
 const List: React.FC<Props> = ({ items, removeItem, editItem }) => {
   return (
     <div className="grocery-list">
-      {items.map((item: any) => {
-        const { id, title } = item;
+      {items.map((item: IToDoItemType) => {
         return (
-          <article className="grocery-item" key={id}>
-            <p className="title">{title}</p>
-            <div className="btn-container">
-              <button
-                type="button"
-                className="edit-btn"
-                onClick={() => editItem(id)}
-              >
-                <Edit size={15} color="green"/>
-              </button>
-              <button
-                type="button"
-                className="delete-btn"
-                onClick={() => removeItem(id)}
-              >
-                <Delete size={15} color="red"/>
-              </button>
-            </div>
-          </article>
+          <>
+            <ToDoItem item={item} removeItem={removeItem} editItem={editItem} />
+          </>
         );
       })}
     </div>
